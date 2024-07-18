@@ -3798,6 +3798,7 @@ input, select, textarea {
 
 		#main > .projects {
 			padding: 8rem 8rem 6rem 8rem ;
+			text-align: center;
 		}
 
 			#main > .projects header.major > .date {
@@ -3811,6 +3812,10 @@ input, select, textarea {
 			}
 
 			#main > .certification {
+				text-align: center;
+			}
+
+			#main > .resume {
 				text-align: center;
 			}
 
