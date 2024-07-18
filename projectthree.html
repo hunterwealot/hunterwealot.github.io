@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="projectthree.css" />
+  <title></title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>Cascading Sytle Sheets (CSS)</header>
+    <ul>
+      <li>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#History">History</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Syntax_Use">Syntax Use</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Syntax_Inheritance">Syntax Inheritance</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Syntax_Positioning">Syntax Positioning</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Article_Reference">Article Reference</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]</p>
+      <div class="div"></div>
+      <p>CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.[3] This separation can improve content accessibility;[further explanation needed] provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+<div class="div"></div>
+Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[4]
+<div class="div"></div>
+The name cascading comes from the specified priority scheme to determine which declaration applies if more than one declaration of a property match a particular element. This cascading priority scheme is predictable.
+<div class="div"></div>
+The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.[5]
+<div class="div"></div>
+In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL. CSS is also used in the GTK widget toolkit.</p>
+    </section>
+    <section class="main-section" id="History">
+      <header>History</header>
+       <p>CSS was first proposed by Håkon Wium Lie on 10 October 1994.[23] At the time, Lie was working with Tim Berners-Lee at CERN.[24] Several other style sheet languages for the web were proposed around the same time, and discussions on public mailing lists and inside World Wide Web Consortium resulted in the first W3C CSS Recommendation (CSS1)[25] being released in 1996. In particular, a proposal by Bert Bos was influential; he became co-author of CSS1, and is regarded as co-creator of CSS.[26]</p>
+       <p>Lie's proposal was presented at the "Mosaic and the Web" conference (later called WWW2) in Chicago, Illinois in 1994, and again with Bert Bos in 1995.[24] Around this time the W3C was already being established and took an interest in the development of CSS. It organized a workshop toward that end chaired by Steven Pemberton. This resulted in W3C adding work on CSS to the deliverables of the HTML editorial review board (ERB). Lie and Bos were the primary technical staff on this aspect of the project, with additional members, including Thomas Reardon of Microsoft, participating as well. In August 1996, Netscape Communication Corporation presented an alternative style sheet language called JavaScript Style Sheets (JSSS).[24] The spec was never finished, and is deprecated.[33] By the end of 1996, CSS was ready to become official, and the CSS level 1 Recommendation was published in December.</p>
+    </section>
+    <section class="main-section" id="Syntax_Use">
+      <header>Syntax Use</header>
+       <p> 
+         Before CSS, nearly all presentational attributes of HTML documents were contained within the HTML markup. All font colors, background styles, element alignments, borders, and sizes had to be explicitly described, often repeatedly, within the HTML. CSS lets authors move much of that information to another file, the style sheet, resulting in considerably simpler HTML. And additionally, as more and more devices are able to access responsive web pages, different screen sizes and layouts begin to appear. Customizing a website for each device size is costly and increasingly difficult. The modular nature of CSS means that styles can be reused in different parts of a site or even across sites, promoting consistency and efficiency.
+
+For example, headings (h1 elements), sub-headings (h2), sub-sub-headings (h3), etc., are defined structurally using HTML. In print and on the screen, choice of font, size, color and emphasis for these elements is presentational.
+
+Before CSS, document authors who wanted to assign such typographic characteristics to, say, all h2 headings had to repeat HTML presentational markup for each occurrence of that heading type. This made documents more complex, larger, and more error-prone and difficult to maintain. CSS allows the separation of presentation from structure. CSS can define color, font, text alignment, size, borders, spacing, layout and many other typographic characteristics, and can do so independently for on-screen and printed views. CSS also defines non-visual styles, such as reading speed and emphasis for aural text readers. The W3C has now deprecated the use of all presentational HTML markup.[16]
+        <div class="div"></div>
+      <p>
+        For example, under pre-CSS HTML, a heading element defined with red text would be written as:
+        <code> 
+          <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">font</span> <span class="na">color</span><span class="o">=</span><span class="s">"red"</span><span class="p">&gt;</span>Chapter 1.<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div> 
+      </code>
+      </p>
+      <p>
+        Using CSS, the same element can be coded using style properties instead of HTML presentational attributes:
+        <code>
+          <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">"color: red;"</span><span class="p">&gt;</span>Chapter 1.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+      </code>
+      </p>
+      <p> 
+        The advantages of this may not be immediately clear but the power of CSS becomes more apparent when the style properties are placed in an internal style element or, even better, an external CSS file. For example, suppose the document contains the style element:
+        <code>
+         <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+        </code>
+        </p>
+        <p>
+          All h1 elements in the document will then automatically become red without requiring any explicit code. If the author later wanted to make h1 elements blue instead, this could be done by changing the style element to:
+        <code>
+          <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+        </code>
+      </p>
+    </section>
+    <section class="main-section" id="Syntax_Inheritance">
+      <header>Syntax Inheritance</header>
+      <p>
+        nheritance is a key feature in CSS; it relies on the ancestor-descendant relationship to operate. Inheritance is the mechanism by which properties are applied not only to a specified element but also to its descendants.[17] Inheritance relies on the document tree, which is the hierarchy of XHTML elements in a page based on nesting. Descendant elements may inherit CSS property values from any ancestor element enclosing them. In general, descendant elements inherit text-related properties, but their box-related properties are not inherited. Properties that can be inherited are color, font, letter spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space, and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height, and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align, and z-index.
+
+Inheritance can be used to avoid declaring certain properties over and over again in a style sheet, allowing for shorter CSS.
+
+Inheritance in CSS is not the same as inheritance in class-based programming languages, where it is possible to define class B as "like class A, but with modifications".[19] With CSS, it is possible to style an element with "class A, but with modifications". However, it is not possible to define a CSS class B like that, which could then be used to style multiple elements without having to repeat the modifications.
+      </p> 
+      <p>
+        Example
+Given the following style sheet:
+        <code>
+          <div class="mw-highlight mw-highlight-lang-css mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">pink</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+        </code>
+        </p>
+        <p>
+          Suppose there is a p element with an emphasizing element (<em>) inside:
+        <code>
+          <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+   This is to <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>illustrate<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> inheritance
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+        </code>
+        <p>
+          If no color is assigned to the em element, the emphasized word "illustrate" inherits the color of the parent element, p. The style sheet p has the color pink, hence, the em element is likewise pink:
+        </p>
+        </p>
+    </section>
+    <section class="main-section" id="Syntax_Positioning">
+      <header>Syntax Positioning</header>
+        <p>
+          CSS 2.1 defines three positioning schemes:
+        </p>
+        <ul>
+          <li>Normal flow
+Inline items are laid out in the same way as the letters in words in the text, one after the other across the available space until there is no more room, then starting a new line below. Block items stack vertically, like paragraphs and like the items in a bulleted list. Normal flow also includes the relative positioning of block or inline items and run-in boxes.</li>
+          <li>
+            Floats
+A floated item is taken out of the normal flow and shifted to the left or right as far as possible in the space available. Other content then flows alongside the floated item.
+          </li>
+          <li>
+            Absolute positioning
+An absolutely positioned item has no place in, and no effect on, the normal flow of other items. It occupies its assigned position in its container independently of other items.[21]
+          </li>
+          <li>
+            Position property
+There are five possible values of the position property. If an item is positioned in any way other than static, then the further properties top, bottom, left, and right are used to specify offsets and positions.The element having position static is not affected by the top, bottom , left or right properties.
+          </li>
+          <li>
+            Static
+The default value places the item in the normal flow.
+          </li>
+          <li>
+            Relative
+The item is placed in the normal flow, and then shifted or offset from that position. Subsequent flow items are laid out as if the item had not been moved.
+          </li>
+          <li>
+            Absolute
+Specifies absolute positioning. The element is positioned in relation to its nearest non-static ancestor.
+          </li>
+          <li>
+            Fixed
+The item is absolutely positioned in a fixed position on the screen even as the rest of the document is scrolled[21]
+          </li>
+          <li>
+            Float and clear
+The float property may have one of three values. Absolutely positioned or fixed items cannot be floated. Other elements normally flow around floated items, unless they are prevented from doing so by their clear property.
+          </li>
+          <li>
+            left
+The item floats to the left of the line that it would have appeared in; other items may flow around its right side.
+          </li>
+          <li>
+            right
+The item floats to the right of the line that it would have appeared in; other items may flow around its left side.
+          </li>
+          <li>
+            clear
+Forces the element to appear underneath ('clear') floated elements to the left (clear:left), right (clear:right) or both sides (clear:both).[21][22]
+          </li>
+        </ul>
+        <p> 
+        </p>
+    </section>
+<section class="main-section" id="Article_Reference">
+        <header>Article Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Wikipedia</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+  </main>
+</body>
+</html>

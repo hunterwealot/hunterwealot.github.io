@@ -2632,6 +2632,20 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.image.half {
+				display: block;
+				margin: auto;
+				width: 75%;
+			}
+	
+				.image.half:first-child {
+					margin-top: 0;
+				}
+	
+				.image.half img {
+					width: 100%;
+				}
+
 		.image.main {
 			display: block;
 			margin: 4rem 0;
@@ -2653,6 +2667,10 @@ input, select, textarea {
 			}
 
 			.image.main {
+				margin: 2rem 0;
+			}
+
+			image.half {
 				margin: 2rem 0;
 			}
 
@@ -3234,7 +3252,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/overla.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
@@ -3778,21 +3796,21 @@ input, select, textarea {
 			text-align: center;
 		}
 
-		#main > .post {
+		#main > .projects {
 			padding: 8rem 8rem 6rem 8rem ;
 		}
 
-			#main > .post header.major > .date {
+			#main > .projects header.major > .date {
 				margin-top: -2rem;
 			}
 
-			#main > .post header.major > h1, #main > .post header.major h2 {
+			#main > .projects header.major > h1, #main > .projects header.major h2 {
 				font-size: 4rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
 
-			#main > .post.featured {
+			#main > .certification {
 				text-align: center;
 			}
 
